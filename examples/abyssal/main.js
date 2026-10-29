@@ -1,8 +1,10 @@
+import './tailwind.css';
 import { Engine, THREE, normalize, prepModel, damp, clamp, smooth, lerp, studioEnvironment } from '../../src/core/engine.js';
 import { Assets } from '../../src/core/assets.js';
 import { Pointer } from '../../src/core/input.js';
 import { smoothScroll, gsap, reveal } from '../../src/core/scroll.js';
-import { preloader, cursor, magnetic, worldNav } from '../../src/core/ui.js';
+// ORIGINAL (preserved, not deleted — disabled by comment): import { preloader, cursor, magnetic, worldNav } from '../../src/core/ui.js';
+import { preloader, cursor, magnetic } from '../../src/core/ui.js';
 import { FloodBeamEffect } from './beams.js';
 import { fbmNormal, fbmTexture } from '../../src/core/textures.js';
 import { AbyssEffect, waterSurface, waterDome, patchWater, waterUniforms } from './ocean.js';
@@ -995,7 +997,7 @@ engine.onTick((dt, t) => {
 });
 
 // ─── Boot ─────────────────────────────────────────────────────────────────────
-worldNav('abyssal', { theme: 'dark' });
+// ORIGINAL (preserved, not deleted — disabled by comment): worldNav('abyssal', { theme: 'dark' });
 cursor({ color: '#3fd6c9', blend: 'normal', size: 34 });
 magnetic();
 const lenis = smoothScroll({ lerp: 0.08 });
