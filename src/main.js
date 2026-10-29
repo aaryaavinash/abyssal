@@ -1,12 +1,11 @@
 import './tailwind.css';
-import { Engine, THREE, normalize, prepModel, damp, clamp, smooth, lerp, studioEnvironment } from '../../src/core/engine.js';
-import { Assets } from '../../src/core/assets.js';
-import { Pointer } from '../../src/core/input.js';
-import { smoothScroll, gsap, reveal } from '../../src/core/scroll.js';
-// ORIGINAL (preserved, not deleted — disabled by comment): import { preloader, cursor, magnetic, worldNav } from '../../src/core/ui.js';
-import { preloader, cursor, magnetic } from '../../src/core/ui.js';
+import { Engine, THREE, normalize, prepModel, damp, clamp, smooth, lerp, studioEnvironment } from './core/engine.js';
+import { Assets } from './core/assets.js';
+import { Pointer } from './core/input.js';
+import { smoothScroll, gsap, reveal } from './core/scroll.js';
+import { preloader, cursor, magnetic } from './core/ui.js';
 import { FloodBeamEffect } from './beams.js';
-import { fbmNormal, fbmTexture } from '../../src/core/textures.js';
+import { fbmNormal, fbmTexture } from './core/textures.js';
 import { AbyssEffect, waterSurface, waterDome, patchWater, waterUniforms } from './ocean.js';
 import { marineSnow, spawner, jellyfish, fishSchool, ventPlume, terrain, beacon, floodUniforms } from './life.js';
 import { odometer, tempAt, pressureAt, lightAt, fmtLight, fmtTime, zoneAt, LOG } from './hud.js';
@@ -212,7 +211,7 @@ scene.add(strobeDot);
 const fill = new THREE.DirectionalLight(0x3b6a9e, 0);
 scene.add(fill, fill.target);
 
-const subLoad = assets.gltf('models/abyssal/sub.glb').then(g => {
+const subLoad = assets.gltf('models/sub.glb').then(g => {
   const m = g.scene;
   normalize(m, SUB_L, { ground: false });
   subScale = m.scale.x;
@@ -235,7 +234,7 @@ const subLoad = assets.gltf('models/abyssal/sub.glb').then(g => {
 const nautilus = new THREE.Group();
 scene.add(nautilus);
 const NAUT_BASE = V3(1.6, descY(1) - 0.35, 2.4);
-const nautLoad = assets.gltf('models/abyssal/nautilus.glb').then(g => {
+const nautLoad = assets.gltf('models/nautilus.glb').then(g => {
   const m = g.scene;
   normalize(m, 1.25, { ground: false });
   prepModel(m, renderer, { env: 1.0, onMat: mat => { mat.name = 'naut'; patchWater(mat); } });
@@ -285,7 +284,7 @@ scene.add(lureLight);
 const lureHalo = makeGlowSprite(0x8ff0ff, 0.9);
 scene.add(lureHalo);
 let anglerScale = 1;
-const angLoad = assets.gltf('models/abyssal/angler.glb').then(g => {
+const angLoad = assets.gltf('models/angler.glb').then(g => {
   const m = g.scene;
   normalize(m, 3.6, { ground: false });
   anglerScale = m.scale.x;
@@ -324,7 +323,7 @@ const ventTop = V3();
 let plume;
 const ventLights = [new THREE.PointLight(0xff6a1e, 0, 11, 1.6), new THREE.PointLight(0xff8a3a, 0, 6, 1.8)];
 for (const l of ventLights) scene.add(l);
-const ventLoad = assets.gltf('models/abyssal/vent.glb').then(g => {
+const ventLoad = assets.gltf('models/vent.glb').then(g => {
   const m = g.scene;
   normalize(m, 5.8, { ground: true });
   const s = m.scale.x;
@@ -997,7 +996,6 @@ engine.onTick((dt, t) => {
 });
 
 // ─── Boot ─────────────────────────────────────────────────────────────────────
-// ORIGINAL (preserved, not deleted — disabled by comment): worldNav('abyssal', { theme: 'dark' });
 cursor({ color: '#3fd6c9', blend: 'normal', size: 34 });
 magnetic();
 const lenis = smoothScroll({ lerp: 0.08 });

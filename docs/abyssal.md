@@ -1,4 +1,4 @@
-# 02 · Abyssal — "Descend eleven thousand metres"
+# Abyssal — "Descend eleven thousand metres"
 Brand: **Abyssal** — a private deep-ocean expedition house that takes 3 guests per dive to the Challenger Deep in the submersible *Pelagia*.
 
 ## Signature interaction
@@ -10,7 +10,7 @@ the floodlights** — you search the dark. Moving the cursor fast leaves a trail
 particles spawned along the pointer ray that flash cyan and fade).
 
 ## Scene & choreography
-- The submersible (`models/abyssal/sub.glb`) descends with the camera, framed off-centre, slowly rotating, lights on.
+- The submersible (`models/sub.glb`) descends with the camera, framed off-centre, slowly rotating, lights on.
 - Zones (each a section with copy): Sunlight 0–200 m (nautilus `nautilus.glb` drifting), Twilight 200–1,000 m (procedural
   jellyfish: translucent bell shader + trailing tentacle lines, pulsing), Midnight 1,000–4,000 m (anglerfish `angler.glb`
   looms out of the dark — its lure is an emissive bulb + small point light; it turns toward the beam), Abyss

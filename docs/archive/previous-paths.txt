@@ -1,0 +1,17 @@
+// ORIGINAL (preserved, not deleted — disabled by comment): previous nested paths
+// import { Engine, THREE, normalize, prepModel, damp, clamp, smooth, lerp, studioEnvironment } from '../../src/core/engine.js';
+// import { Assets } from '../../src/core/assets.js';
+// import { Pointer } from '../../src/core/input.js';
+// import { smoothScroll, gsap, reveal } from '../../src/core/scroll.js';
+// // ORIGINAL (preserved, not deleted — disabled by comment): import { preloader, cursor, magnetic, worldNav } from '../../src/core/ui.js';
+// import { preloader, cursor, magnetic } from '../../src/core/ui.js';
+// import { fbmNormal, fbmTexture } from '../../src/core/textures.js';
+// const subLoad = assets.gltf('models/abyssal/sub.glb').then(g => {
+// const nautLoad = assets.gltf('models/abyssal/nautilus.glb').then(g => {
+// const angLoad = assets.gltf('models/abyssal/angler.glb').then(g => {
+// const ventLoad = assets.gltf('models/abyssal/vent.glb').then(g => {
+// // ORIGINAL (preserved, not deleted — disabled by comment): worldNav('abyssal', { theme: 'dark' });
+//   <link rel="stylesheet" href="./examples/abyssal/style.css">
+//   <script type="module" src="./examples/abyssal/main.js"></script>
+// // ORIGINAL (preserved, not deleted — disabled by comment): import { preloader, cursor, magnetic, worldNav } from './core/ui.js';
+// // ORIGINAL (preserved, not deleted — disabled by comment): worldNav('abyssal', { theme: 'dark' });

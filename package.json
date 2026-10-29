@@ -1,7 +1,7 @@
 {
   "name": "abyssal",
   "private": true,
-  "description": "Standalone Abyssal world from Dioramas.",
+  "description": "A private deep-ocean expedition concept that follows the Pelagia submersible toward the Challenger Deep.",
   "license": "MIT",
   "version": "0.1.0",
   "type": "module",
